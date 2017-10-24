@@ -1,0 +1,238 @@
+/* 
+
+	TableCloth	
+	by Alen Grakalic, brought to you by cssglobe.com
+	
+*/
+
+/* general styles */
+
+table, td{
+	font:100% Arial, Helvetica, sans-serif; 
+}
+table{width:100%;border-collapse:collapse;margin:1em 0;}
+th, td{text-align:center;padding:.5em;border:1px solid #fff;}
+th{
+  background:#3c8dbc;
+  color: #FFF;
+}
+input{
+  height: 24px !important;
+}
+
+.logo:hover{
+  color: #FFF !important;
+}
+.etiquetaActiva{
+  color: #444;
+  background: #C7CBD0;
+}
+/*td{background:#e5f1f4;}*/
+
+/* tablecloth styles */
+
+/*tr.even td{background:#e5f1f4;}*/
+/*tr.odd td{background:#f8fbfc;}*/
+
+/*th.over, tr.even th.over, tr.odd th.over{background:#4a98af;}
+th.down, tr.even th.down, tr.odd th.down{background:#bce774;}
+th.selected, tr.even th.selected, tr.odd th.selected{}
+
+td.over, tr.even td.over, tr.odd td.over{background:#ecfbd4;}
+td.down, tr.even td.down, tr.odd td.down{background:#bce774;color:#fff;}
+td.selected, tr.even td.selected, tr.odd td.selected{background:#bce774;color:#555;}*/
+
+/* use this if you want to apply different styleing to empty table cells*/
+/*td.empty, tr.odd td.empty, tr.even td.empty{background:#fff;}*/
+
+
+input.error {
+	border: 1px solid #E23225 !important;
+}
+
+select.error {
+	border: 1px solid #E23225 !important;
+}
+
+textarea.error {
+	border: 1px solid #E23225 !important;
+}
+
+div.error {
+	border: 1px solid #E23225 !important;
+}
+.botonAgregarRegistro {
+  width: 56px !important;
+  height: 56px;
+  background-color: #13A560;
+  position: fixed !important;
+  bottom: 42px !important;
+  right: 15px !important;
+  -webkit-border-radius: 28px !important;
+  -moz-border-radius: 28px !important;
+  border-radius: 28px !important;
+  opacity: 0.8;
+  cursor: pointer;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  box-shadow: 3px 2px 6px #888888;  
+}
+.botonAgregarRegistro:hover {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -webkit-transform: rotate(90deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(90deg);
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  box-shadow: 1px -5px 9px #888888;
+}
+@media (min-width: 1200px) and (max-width: 2500px) {
+  .botonAgregarRegistro {
+    right: 25px !important;
+  }
+}
+@media (min-width: 400px) and (max-width: 1200px) {
+  .botonAgregarRegistro {
+    right: 25px !important;
+  }
+}
+@media (min-width: 1px) and (max-width: 400px) {
+  .botonAgregarRegistro {
+    width: 50px !important;
+    height: 50px !important;
+    right: 25px !important;
+  }
+}
+.botonAgregarRegistro .fa-plus {
+  margin-top: 17px;  
+  font-size: 20px;
+  color: white;
+  margin-left: 19px;
+  cursor: pointer;
+}
+@media (min-width: 1px) and (max-width: 400px) {
+  .botonAgregarRegistro .fa-plus {
+    margin-top: 18px !important;
+    font-size: 17px !important;    
+  }
+}
+
+
+
+@font-face {
+  font-family: "Roboto-Black";
+  src: url("roboto/Roboto-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-BlackItalic";
+  src: url("roboto/Roboto-BlackItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-BoldItalic";
+  src: url("roboto/Roboto-BoldItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoCondensed-Bold";
+  src: url("roboto/RobotoCondensed-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoCondensed-BoldItalic";
+  src: url("roboto/RobotoCondensed-BoldItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoCondensed-Italic";
+  src: url("roboto/RobotoCondensed-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoCondensed-Light";
+  src: url("roboto/RobotoCondensed-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoCondensed-LightItalic";
+  src: url("roboto/RobotoCondensed-LightItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoCondensed-Regular";
+  src: url("roboto/RobotoCondensed-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Italic";
+  src: url("roboto/Roboto-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-LightItalic";
+  src: url("roboto/Roboto-LightItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-MediumItalict";
+  src: url("roboto/Roboto-MediumItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url("roboto/Roboto-Thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-ThinItalic";
+  src: url("roboto/Roboto-ThinItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
