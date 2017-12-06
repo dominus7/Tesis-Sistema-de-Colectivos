@@ -2,7 +2,7 @@
 	<script type="text/javascript">
         var base_url = '<?= base_url(); ?>';        
     </script>       
-    <title>App_Uno</title>
+    <title>GesCol</title>
 	   <!-- jQuery 2.1.4 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>

@@ -1,4 +1,4 @@
-<script type="text/javascript" src="<?= base_url(); ?>../js/MantenedorChofer/MantenedorChofer.js"></script>
+<script type="text/javascript" src="<?= base_url(); ?>../js/MantenedorVehiculo/MantenedorVehiculo.js"></script>
 <script>
    tabla();
 </script>
@@ -18,12 +18,12 @@
         <!-- INICIO FORMULARIO-->
         <div class="col-sm-6 col-lg-4">
           <div class="form-group">
-            <label for="Perfil" class="col-md-4 control-label">Chofer:</label>
+            <label for="Perfil" class="col-md-4 control-label">Perfil:</label>
             <div class="col-md-8">
               <select id="Perfil" style="height: 24px !important;width: 100% !important;">
                 <option value="0">Seleccione</option>
                 <?php foreach ($datosPerfil as $filas): ?>
-                    <option value="<?= $filas['idChofer'];?>"><?= $filas['Nombre']; ?></option>                 
+                    <option value="<?= $filas['idVehiculo'];?>"><?= $filas['patente']; ?></option>                 
                 <?php endforeach; ?> 
             </select>
             </div>

@@ -6,14 +6,10 @@ $("#btnCancelar").button().click(function() {
     clickMenu('MantenedorChofer');
 });
 $("#btnCrear").button().click(function() {    
-    var Rut = $('#Rut').val();
+    var RUN = $('#RUN').val();
     var Nombre = $('#Nombre').val();
-    var ApellidoP = $('#Apellidos').val();
-    var ApellidoM = $('#Apellidos').val();
-    var Direccion = $('#Direccion').val();
-    var Telefono = $('#Telefono').val();
-    var Email = $('#Email').val();
-    
+    var Apellidos = $('#Apellidos').val();
+    var Correo= $('#Correo').val();
     var Estado = $('#Estado').val();  
     
 
@@ -22,7 +18,7 @@ $("#btnCrear").button().click(function() {
     	//alert("no tengo error");
     	$.post(
             base_url + "MantenedorChofer/crear",
-            {Rut:Rut,Nombre:Nombre,ApellidoP:ApellidoP,ApellidoM:ApellidoM,Direccion:Direccion,Telefono:Telefono,Email:Email,Estado:Estado},
+            {RUN:RUN,Nombre:Nombre,Apellidos:Apellidos,Correo:Correo,Estado:Estado},
             function(datos) {            	
             	if(datos.valor==0){
             		clickMenu('MantenedorChofer');

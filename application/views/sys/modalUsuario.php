@@ -8,7 +8,7 @@
                   <i class="glyphicon glyphicon-envelope"></i><span class="label label-danger"><?php echo $cantidad?></span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li class="header">Tú tienes 10 mensaje(s) el día de hoy</li>
+                  <li class="header">No tienes mensaje(s) el día de hoy</li>
                   <li>
                       <!-- inner menu: contains the actual data -->
                       <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;"><ul class="menu" style=" width: 100%; height: 200px;">
@@ -25,13 +25,13 @@
                   <i class="glyphicon glyphicon-bell"></i><span class="label label-warning">10</span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li class="header">Tú tienes 10 notificaciones el dia de hoy</li>
+                  <li class="header">No tienes notificaciones el dia de hoy</li>
                   <li>
                     <!-- inner menu: contains the actual data -->
                     <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;"><ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
                       <li>
                         <a href="#">
-                          <i class="fa fa-users text-aqua"></i> 10 nuevos miembros
+                          <i class="fa fa-users text-aqua"></i> 1 nuevo miembro
                         </a>
                       </li>
                     </ul><div class="slimScrollBar" style="width: 3px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>

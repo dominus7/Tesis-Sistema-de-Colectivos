@@ -18,5 +18,28 @@ class MantenedorVehiculo extends CI_Controller {
         $datos['cantidad'] = count($datosTabla);
         $datos['datos']= $datosTabla;
         $this->load->view('sys/Mantenedores/Vehiculo/index', $datos);
-} 
+    }
+    function cargarPerfil() {                                           
+        
+        $this->load->view('sys/Mantenedores/Vehiculo/Nuevo');
+    }
+
+     
+
+
+
+
+
+    function cargarEditarVehiculo() {       
+        $id_contMenu = $this->input->post("id_contMenu");
+        $data = $this->Modelousuario->cargarEditarVehiculo($id_contMenu);
+                        
+        $datos['cantidad'] = count($data);
+        $datos['datos'] = $data;
+
+        $selectorPerfil = $this->Modelousuario->traerPerfil();  
+        $datos['cantidadPerfil'] = count($selectorPerfil);
+        $datos['datosPerfil'] = $selectorPerfil;
+        $this->load->view('sys/Mantenedores/Vehiculo/Editar', $datos);
+    } 
 }

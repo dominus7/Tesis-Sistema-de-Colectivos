@@ -37,27 +37,20 @@ class MantenedorChofer extends CI_Controller {
         $this->load->view('sys/Mantenedores/Chofer/Nuevo', $datos);
 }
 function crear() {        
-        $Rut = $this->input->post("runC");
-        $Rut = strtoupper($Rut);
-        $Nombre = $this->input->post("nombreC");
+        $RUN = $this->input->post("RUN");
+        $RUN = strtoupper($RUN);
+        $Nombre = $this->input->post("Nombre");
         $Nombre = strtoupper($Nombre);
-        $ApellidoP = $this->input->post("apellidoP");
-        $ApellidoP = strtoupper($ApellidoP);
-        $ApellidoM = $this->input->post("apellidoM");
-        $ApellidoM = strtoupper($ApellidoM);
-        $Direccion = $this->input->post("direccion");
-        $Direccion = strtoupper($Direccion);
-        $Telefono = $this->input->post("telefono");
-        $Telefono = strtoupper($Telefono);
-        $Email = $this->input->post("Email");
-        $Email = strtoupper($Email);
-        $Perfil = $this->input->post("Perfil");
+        $Apellidos = $this->input->post("Apellidos");
+        $Apellidos = strtoupper($Apellidos);
+        $Correo = $this->input->post("Correo");
+        $Correo = strtoupper($Correo);
         $Estado = $this->input->post("Estado");        
 
         
 
         $valor = 1;
-        if ($this->Modelochofer->crear($Rut, $Nombre, $ApellidoP, $ApellidoM, $Direccion,$Telefono, $Email,$Perfil, $Estado) == 0) {
+        if ($this->Modelochofer->crear($RUN, $Nombre, $Apellidos, $Correo, $Estado) == 0) {
             $valor = 0;
         }
         echo json_encode(array("valor" => $valor));

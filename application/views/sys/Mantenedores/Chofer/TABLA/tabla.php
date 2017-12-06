@@ -8,14 +8,11 @@
     <table id="myTable" class="table table-hover">
         <thead align="center">
                 <th>N°</th>    
-        <th>Rut</th>
+        
         <th>Nombre</th>
         <th>Apellidos</th>
-        <th>Apellidos</th>
-        <th>Direccion</th>
-        <th>Telefono</th>
+        <th>Rut</th>
         <th>Email</th>
-        <th>Encargado</th>    
         <th>Estado</th> 
         
     </thead>
@@ -24,17 +21,13 @@
         <? $i = 0; ?>        
         <?php foreach ($datos as $filas): ?>                      
                 <? $i++; ?>      
-                <tr id="<?= $filas['idChofer'];?>" vista="MantenedorChofer" estado="<?= $filas['estadoC']; ?>" align="center">
+                <tr id="<?= $filas['idChofer'];?>" vista="MantenedorChofer" estado="<?= $filas['Estado']; ?>" align="center">
                     <td><?= $i;?></td>
-                    <td><?= $filas['runC']; ?></td>        
-                    <td><?= $filas['nombreC']; ?></td>
-                    <td><?= $filas['apellidoPC']; ?></td>
-                    <td><?= $filas['apellidoMC']; ?></td>
-                    <td><?= $filas['direccionC']; ?></td>
-                    <td><?= $filas['telefonoC']; ?></td>
-                    <td><?= $filas['emailC']; ?></td>
-                    <td><?= $filas['Encargado']; ?></td>
-                    <td><?= $filas['estadoC']; ?></td>                   
+                    <td><?= $filas['Nombre']; ?></td>
+                    <td><?= $filas['Apellidos']; ?></td>
+                    <td><?= $filas['RUN']; ?></td>
+                    <td><?= $filas['Correo']; ?></td>
+                    <td><?= $filas['Estado']; ?></td>                   
                 </tr>                        
         <?php endforeach; ?>        
     </tbody>

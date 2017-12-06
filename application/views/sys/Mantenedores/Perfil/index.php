@@ -20,7 +20,7 @@
               <select id="Perfil" style="height: 24px !important;width: 100% !important;">
                 <option value="0">Seleccione</option>
                 <?php foreach ($datosPerfil as $filas): ?>
-                    <option value="<?= $filas['idChofer'];?>"><?= $filas['Nombre']; ?></option>                 
+                    <option value="<?= $filas['ID'];?>"><?= $filas['Nombre']; ?></option>                 
                 <?php endforeach; ?> 
             </select>
             </div>

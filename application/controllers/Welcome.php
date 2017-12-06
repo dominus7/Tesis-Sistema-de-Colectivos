@@ -123,6 +123,7 @@ class Welcome extends CI_Controller {
         $Perfil = '';
         $imagen = '';
         $cookie = array('id' => '', 'rut' => '', 'nombre' => '', 'Perfil' => '', 'tipo' => '','estado'=>'','imagen'=>'' , 'esta_logueado' => false);
+        //var_dump($this->Modelo->conectar($login, $clave)->num_rows());
         if ($this->Modelo->conectar($login, $clave)->num_rows() == 1) {
             $data = $this->Modelo->conectar($login, $clave)->result();
             foreach ($data as $fila) {

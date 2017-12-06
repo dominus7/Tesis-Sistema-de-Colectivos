@@ -1,8 +1,10 @@
-$(document).ready(function () {        
+$(document).ready(function () {  
+
     verificarLogin();    
 });
 
 function verificarLogin() {
+
     $.post(
             base_url + "Welcome/verificarLogin",
             {},

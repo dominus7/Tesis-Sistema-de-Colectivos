@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="css/login.css">
       <div id="login">          
-          <div id="login-content" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centerTable" style="height: 100%;padding-left: 35%;">            
+          <div id="login-content" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 centerTable" style="height: 100%;padding-left: 40%; padding-right:  50%;">            
             <table>
               <tr>
                   <td align="center">

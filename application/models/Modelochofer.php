@@ -3,8 +3,8 @@
     * 
     */
 class Modelochofer extends CI_Model{
-function traerPerfil(){               
-        $sql = "select 
+    /**
+        "select 
         c.idChofer,
         c.runC,
         c.nombreC, 
@@ -17,6 +17,18 @@ function traerPerfil(){
         c.estadoC
          from Chofer c
         INNER JOIN Usuario u ON u.ID= c.fk_idUsuario";  
+        **/
+function traerPerfil(){               
+        $sql = 
+        "select 
+        idChofer,
+        Nombre,
+        Apellidos,
+        RUN, 
+        Correo,
+        Estado 
+        from Chofer";
+
         $query=$this->db->query($sql);
         $perfiles = $query->result_array();
         return $perfiles; 
@@ -24,19 +36,15 @@ function traerPerfil(){
         
     }
     function tabla(){
-        $sql = "select 
-        c.idChofer,
-        c.runC,
-        c.nombreC, 
-        c.apellidoPC, 
-        c.apellidoMC, 
-        c.direccionC, 
-        c.telefonoC, 
-        c.emailC,
-        u.Nombre as Encargado,
-        c.estadoC
-         from Chofer c
-        INNER JOIN Usuario u ON u.ID= c.fk_idUsuario";  
+        $sql = 
+        "select 
+        idChofer,
+        Nombre,
+        Apellidos,
+        RUN, 
+        Correo,
+        Estado 
+        from Chofer";
         $query=$this->db->query($sql);
         $chofer = $query->result_array();
 
@@ -50,7 +58,7 @@ function traerPerfil(){
         $cantidad = $this->db->get('Chofer')->num_rows();
             if ($cantidad == 1) {
                 $datos = array(
-                    "estadoC" => $estado
+                    "Estado" => $estado
                 );
                 $this->db->where('idChofer', $id_contMenu);
                 $this->db->update('Chofer', $datos);  
@@ -79,51 +87,45 @@ function traerPerfil(){
 
     function filtrar($perfil,$estado){
         $sql = "select 
-        c.idChofer,
-        c.runC,
-        c.nombreC, 
-        c.apellidoPC, 
-        c.apellidoMC, 
-        c.direccionC, 
-        c.telefonoC, 
-        c.emailC,
-        u.Nombre as Encargado,
-        c.estadoC
-         from Chofer c
-        INNER JOIN Usuario u ON u.ID= c.fk_idUsuario
+                    idChofer,
+                    Nombre,
+                    Apellidos,
+                    RUN, 
+                    Correo,
+                    Estado 
+                    from Chofer
                 WHERE 1=1 ";  
         
         if ($perfil != '0') {
-            $sql .=" AND c.fk_idUsuario = '".$perfil."'";
+            $sql .=" AND idChofer = '".$perfil."'";
         }
-
+        
         if ($estado != '0') {
             
-            $sql .=" AND c.estadoC = '".$estado."'";
+            $sql .=" AND Estado = '".$estado."'";
         }
         
         $query=$this->db->query($sql);
-        $usuarios = $query->result_array();
+        $resultado = $query->result_array();
 
-        return $usuarios; 
+        return $resultado; 
     }
 
-     function crear($RUN, $Nombre,$ApellidoP,$ApellidoM, $Direccion,$Telefono, $Email, $Estado){            
+
+    
+
+     function crear($RUN, $Nombre,$Apellidos, $Correo, $Estado){            
         $this->db->select('*');
-        $this->db->where('runC', $RUN);
+        $this->db->where('RUN', $RUN);
         
         $cantidad = $this->db->get('chofer')->num_rows();
         if ($cantidad == 0) {
             $datos = array(
-                "runC" => $RUN,
-                "nombreC" => $Nombre,
-                "apellidoPC" => $ApellidoP,
-                "apellidoMC" => $ApellidoM,
-                "direccionC" => $Direccion,
-                "telefonoC" => $Telefono,
-                "emailC" => $Email,
-                "fk_idUsuario" => $Perfil,
-                "estadoC" => $Estado,
+                "RUN" => $RUN,
+                "Nombre" => $Nombre,
+                "Apellidos" => $Apellidos,
+                "Correo" => $Correo,
+                "Estado" => $Estado,
                 
             );
 

@@ -162,7 +162,7 @@ function cargando(estado){
                 $('#myModal').modal();                     // initialized with defaults
                 $('#myModal').modal({keyboard:false});   // initialized with no keyboard
                 $('#myModal').modal('hide');                // initializes and invokes show immediately    
-                }),600);      
+                }),1200);      
         break;
     }
     
@@ -189,7 +189,7 @@ function advertencia(estado){
                 $('#myModal').modal();                     // initialized with defaults
                 $('#myModal').modal({keyboard:false});   // initialized with no keyboard
                 $('#myModal').modal('hide');                // initializes and invokes show immediately    
-                }),600);      
+                }),1200);      
         break;
     }
     
@@ -215,7 +215,7 @@ function error(estado){
                 $('#myModal').modal();                     // initialized with defaults
                 $('#myModal').modal({keyboard:false});   // initialized with no keyboard
                 $('#myModal').modal('hide');                // initializes and invokes show immediately    
-                }),600);      
+                }),1200);      
         break;
     }
     
@@ -241,7 +241,7 @@ function exito(estado){
                 $('#myModal').modal();                     // initialized with defaults
                 $('#myModal').modal({keyboard:false});   // initialized with no keyboard
                 $('#myModal').modal('hide');                // initializes and invokes show immediately    
-                }),600);      
+                }),1200);      
         break;
     }
     
