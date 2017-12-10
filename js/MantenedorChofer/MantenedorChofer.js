@@ -1,4 +1,6 @@
-
+$("#Perfil").select2({
+  allowClear: true
+});
 $("#selectorEstado").select2({
   allowClear: true
 });

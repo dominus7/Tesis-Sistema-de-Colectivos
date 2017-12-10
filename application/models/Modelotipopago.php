@@ -5,7 +5,7 @@
 class Modelotipopago extends CI_Model{
 
     function traerPerfil(){                  
-        $sql = "select idTipoPago,monto,fechaCambioValor from tipoPago ";  
+        $sql = "select idTipoPago,nombre,monto,fecha, estado from tipoPago ";  
         $query=$this->db->query($sql);
         $perfiles = $query->result_array();
         return $perfiles; 
@@ -15,9 +15,9 @@ class Modelotipopago extends CI_Model{
     function tabla(){
         $sql = "select 
                     idTipoPago,
-                    descripcion,
+                    nombre,
                     monto,
-                    fechaCambioValor,
+                    fecha,
                     estado from tipoPago";  
         $query=$this->db->query($sql);
         $tipopagos = $query->result_array();
@@ -28,14 +28,14 @@ class Modelotipopago extends CI_Model{
     function crear($Descripcion, $Monto, $Fecha,$Estado){            
         $this->db->select('*');
         $this->db->where('monto', $Monto);
-        $this->db->where('fechaCambioValor',$Fecha);
+        $this->db->where('fecha',$Fecha);
         $cantidad = $this->db->get('tipoPago')->num_rows();
         if ($cantidad == 0) {
             $datos = array(
                 
-                "descripcion" => $Descripcion,
+                "nombre" => $Descripcion,
                 "monto" => $Monto,
-                "fechaCambioValor" => $Fecha,
+                "fecha" => $Fecha,
                 "estado" => $Estado,
                 
                 
@@ -51,9 +51,9 @@ class Modelotipopago extends CI_Model{
     function filtrar($perfil,$estado){
         $sql = "select 
                     idTipoPago,
-                    descripcion,
+                    nombre,
                     monto,
-                    fechaCambioValor,
+                    fecha,
                     estado
                 from tipoPago
                 WHERE 1=1 ";  
@@ -76,9 +76,9 @@ class Modelotipopago extends CI_Model{
      function cargarEditarTipoPago($id_contMenu){                
         $sql = "select 
                     
-                    descripcion,
+                    nombre,
                     monto,
-                    fechaCambioValor,
+                    fecha,
                     estado
                     
                 from tipoPago where idTipoPago=".$id_contMenu;
@@ -89,14 +89,14 @@ class Modelotipopago extends CI_Model{
     }
 
     function editar($id,$Descripcion, $Monto,$Fecha, $Estado){
-        $sql = "select count(*) as valor from tipoPago where monto ='".$Monto."' AND fechaCambioValor = '".$Fecha."' AND idTipoPago <>".$id;          
+        $sql = "select count(*) as valor from tipoPago where monto ='".$Monto."' AND fecha = '".$Fecha."' AND idTipoPago <>".$id;          
         $query=$this->db->query($sql);
         $datos = $query->result_array();        
         $cantidad = $datos[0]['valor'];
         if ($cantidad ==0) {
             $datos = array(
                 
-                "descripcion" => $Descripcion,
+                "nombre" => $Descripcion,
                 "monto" => $Monto,
                 "fecha" => $Fecha,
                 "estado" => $Estado

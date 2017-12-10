@@ -18,7 +18,7 @@
         <!-- INICIO FORMULARIO-->
         <div class="col-sm-6 col-lg-4">
           <div class="form-group">
-            <label for="Perfil" class="col-md-4 control-label">Perfil:</label>
+            <label for="Perfil" class="col-md-4 control-label">Vehiculo:</label>
             <div class="col-md-8">
               <select id="Perfil" style="height: 24px !important;width: 100% !important;">
                 <option value="0">Seleccione</option>

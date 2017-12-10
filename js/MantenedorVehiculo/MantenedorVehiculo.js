@@ -87,7 +87,7 @@ $(".botonAgregarRegistro").click(function() {
             function (ruta) {                                 
         $("#content").html(ruta);        
     });           
-    var accion = "Gestión Usuario";
+    var accion = "Gestión Vehiculo";
     var modulo = "Crear";
     var icono = "glyphicon glyphicon-plus";
     cargar_contenidoPaginaXusuario(modulo,accion,icono);  

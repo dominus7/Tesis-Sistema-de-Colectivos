@@ -42,10 +42,11 @@ class MantenedorUsuario extends CI_Controller {
         $Nombre = strtoupper($Nombre);
         $Apellidos = $this->input->post("Apellidos");
         $Apellidos = strtoupper($Apellidos);
-        $alias = $this->input->post("alias");
+        
         
         $Perfil = $this->input->post("Perfil");
         $Estado = $this->input->post("Estado");        
+        $alias = $this->input->post("alias");
 
         $valor = 1;
         if ($this->Modelousuario->crear($Rut, $Nombre, $Apellidos,$Perfil, $Estado,$alias) == 0) {

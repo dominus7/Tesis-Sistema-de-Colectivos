@@ -17,9 +17,9 @@
             
             <div class="col-sm-6 col-lg-4">
               <div class="form-group">
-                <label for="Descripcion" class="col-md-4 control-label">Descripcion</label>
+                <label for="nombre" class="col-md-4 control-label">Descripcion</label>
                 <div class="col-md-8">              
-                  <input type="text" class="form-control" id="Descripcion" maxlength="10">
+                  <input type="text" class="form-control" id="nombre" maxlength="500">
                 </div>
               </div>
             </div>

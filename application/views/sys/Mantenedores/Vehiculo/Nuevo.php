@@ -1,4 +1,4 @@
-<script type="text/javascript" src="<?= base_url(); ?>../js/MantenedorUsuario/crear.js"></script>
+<script type="text/javascript" src="<?= base_url(); ?>../js/MantenedorVehiculo/crear.js"></script>
 
  <div id="formulario">
    <!--<form class="form-horizontal" role="form">-->
@@ -17,63 +17,67 @@
             
             <div class="col-sm-6 col-lg-4">
               <div class="form-group">
-                <label for="Rut" class="col-md-4 control-label">R.U.N</label>
+                <label for="patente" class="col-md-4 control-label">Patente</label>
                 <div class="col-md-8">              
-                  <input type="text" class="form-control" id="Rut" maxlength="10">
+                  <input type="text" class="form-control" id="patente" maxlength="10">
                 </div>
               </div>
             </div>
 
             <div class="col-sm-6 col-lg-4">
               <div class="form-group">
-                <label for="Nombre" class="col-md-4 control-label">Nombre:</label>
+                <label for="ano" class="col-md-4 control-label">Año:</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="Nombre">
+                  <input type="text" class="form-control" id="ano">
                 </div>
               </div>
             </div>
 
             <div class="col-sm-6 col-lg-4">
               <div class="form-group">
-                <label for="Apellidos" class="col-md-4 control-label">Apellidos:</label>
+                <label for="cajaCambio" class="col-md-4 control-label">Caja de Cambios:</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="Apellidos">
+                  <select id="cajaCambio" style="height: 24px !important;width: 100% !important;">
+                  <option value="0">Seleccione</option>
+                    <option value="Mecanico">Mecánico</option>
+                    <option value="Automatico">Automático</option>
+                </select>
                 </div>
               </div>
             </div>
 
             <div class="col-sm-6 col-lg-4">
               <div class="form-group">
-                <label for="alias" class="col-md-4 control-label">Alias:</label>
+                <label for="kmInicial" class="col-md-4 control-label">Kilometraje:</label>
                 <div class="col-md-8">
-                  <input type="text" class="form-control" id="alias" placeholder="Se necesita para iniciar sesión">
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-sm-6 col-lg-4">
-              <div class="form-group">
-                <label for="Apellidos" class="col-md-4 control-label">Perfil:</label>
-                <div class="col-md-8">
-                  <select id="Perfil" style="height: 24px !important;width: 100% !important;">
-                    <option value="0">Seleccione</option>
-                      <?php foreach ($datosPerfil as $filas): ?>                                                     
-                          <option value="<?= $filas['ID'];?>"><?= $filas['Nombre']; ?></option>                  
-                      <?php endforeach; ?> 
-                  </select>
+                  <input type="text" class="form-control" id="kmInicial" >
                 </div>
               </div>
             </div>
 
             <div class="col-sm-6 col-lg-4">
               <div class="form-group">
-                <label for="Estado" class="col-md-4 control-label">Estado:</label>
+                <label for="combustible" class="col-md-4 control-label">Combustible:</label>
                 <div class="col-md-8">
-                  <select id="Estado" style="height: 24px !important;width: 100% !important;">
+                  <select id="combustible" style="height: 24px !important;width: 100% !important;">
+                  <option value="0">Seleccione</option>
+                    <option value="Bencina">Bencina</option>
+                    <option value="Petroleo">Petroleo</option>
+                    <option value="Gas">Gas</option>
+                </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+              <div class="form-group">
+                <label for="estado" class="col-md-4 control-label">Estado:</label>
+                <div class="col-md-8">
+                  <select id="estado" style="height: 24px !important;width: 100% !important;">
                   <option value="0">Seleccione</option>
                     <option value="Habilitado">Habilitado</option>
                     <option value="Deshabilitado">Deshabilitado</option>
-                </select>
+                  </select>
                 </div>
               </div>
             </div>
