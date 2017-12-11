@@ -21,9 +21,9 @@
                 <tr id="<?= $filas['idTipoPago'];?>" vista="MantenedorTipoPago" estado="<?= $filas['estado']; ?>" align="center">
                     <td><?= $i;?></td>
 
-                    <td><?= $filas['descripcion']; ?></td>        
+                    <td><?= $filas['nombre']; ?></td>        
                     <td><?= $filas['monto']; ?></td>
-                    <td><?= $filas['fechaCambioValor']; ?></td>
+                    <td><?= $filas['fecha']; ?></td>
                     <td><?= $filas['estado']; ?></td>
                     
                 </tr>                        

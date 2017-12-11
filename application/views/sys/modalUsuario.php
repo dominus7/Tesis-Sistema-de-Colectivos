@@ -56,7 +56,7 @@
                     <img src="<?php echo $imagen?>" class="img-circle" alt="User Image" />
                     <p>
                       <?php echo $nombre?> - <?php echo $Perfil?>
-                      <small>Member since Nov. 2012</small>
+                      <small>Member since 2017</small>
                     </p>
                   </li>
                   <!-- Menu Body -->

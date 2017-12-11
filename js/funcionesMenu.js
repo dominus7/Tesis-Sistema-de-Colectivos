@@ -29,8 +29,24 @@ function clickMenu(id){
       cargar_MantenedorTipoPago('menu');
       
       break;
+      case 'MantenedorTipoGasto':
+      cargar_MantenedorTipoGasto('menu');
+      
+      break;
       case 'MantenedorGasto':
       cargar_MantenedorGasto('menu');
+      
+      break;
+      case 'MantenedorAsignacion':
+      cargar_MantenedorAsignacion('menu');
+      
+      break;
+      case 'MantenedorSolicitud':
+      cargar_MantenedorSolicitud('menu');
+      
+      break;
+      case 'MantenedorAntecedente':
+      cargar_MantenedorAntecedente('menu');
       
       break;
   }

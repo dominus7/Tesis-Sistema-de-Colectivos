@@ -34,13 +34,14 @@ class Modelovehiculo extends CI_Model{
         return $vehiculos; 
     }
  
-    function cargarEditarUsuario($id_contMenu){                
-        $sql = "select idVehiculo, ano, patente, cajaCambio, kmInicial, combustible, estado from vehiculo where idVehiculo=".$id_contMenu;
+    function cargarEditarVehiculo($id_contMenu){                
+        $sql = "select idVehiculo, ano, patente, cajaCambio, kmInicial, combustible, estado from Vehiculo where idVehiculo=".$id_contMenu;
         $query=$this->db->query($sql);
         $usuarios = $query->result_array();
 
         return $usuarios; 
     }
+    
     function traerPerfil(){               
         $sql = "select idVehiculo, ano, patente, cajaCambio, kmInicial, combustible, estado from vehiculo" ;
         $query=$this->db->query($sql);
@@ -49,7 +50,7 @@ class Modelovehiculo extends CI_Model{
     }
     //ARREGLANDO EDTIAR, FALTA TERMINAR
     function editar($id,$Patente, $Ano, $CajaCambio, $KmInicial,$Combustible, $Estado){
-        $sql = "select count(*) as valor from Vehiculo where idVehiculo ='".$Patente."' AND ID <>".$id;          
+        $sql = "select count(*) as valor from Vehiculo where patente ='".$Patente."' AND idVehiculo <>".$id;          
         $query=$this->db->query($sql);
         $datos = $query->result_array();        
         $cantidad = $datos[0]['valor'];

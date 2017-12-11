@@ -34,7 +34,7 @@ class MantenedorTipoPago extends CI_Controller {
 
     function crear() {        
        
-        $Descripcion = $this->input->post("Descripcion");
+        $Descripcion = $this->input->post("nombre");
         $Monto = $this->input->post("Monto");
         $Fecha = $this->input->post("Fecha");
         $Estado = $this->input->post("Estado");        
@@ -63,7 +63,7 @@ class MantenedorTipoPago extends CI_Controller {
     function editar() {
         $id = $this->input->post("id");
         
-        $Descripcion = $this->input->post("Descripcion");
+        $Descripcion = $this->input->post("nombre");
         
         $Monto = $this->input->post("Monto");
         

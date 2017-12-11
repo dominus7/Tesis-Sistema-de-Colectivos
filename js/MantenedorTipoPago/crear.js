@@ -7,7 +7,7 @@ $("#btnCancelar").button().click(function() {
 });
 $("#btnCrear").button().click(function() {  
     //los #Descripcion, son variables de la vista
-    var Descripcion = $('#Descripcion').val();
+    var nombre = $('#nombre').val();
     var Monto = $('#Monto').val();
     var Fecha = $('#Fecha').val();
     var Estado = $('#Estado').val();  
@@ -18,7 +18,7 @@ $("#btnCrear").button().click(function() {
     	//alert("no tengo error");
     	$.post(
             base_url + "MantenedorTipoPago/crear",
-            {Descripcion:Descripcion,Monto:Monto,Fecha:Fecha,Estado:Estado},
+            {nombre:nombre,Monto:Monto,Fecha:Fecha,Estado:Estado},
             function(datos) {            	
             	if(datos.valor==0){
             		clickMenu('MantenedorTipoPago');

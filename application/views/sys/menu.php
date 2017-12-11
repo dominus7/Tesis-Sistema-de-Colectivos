@@ -38,32 +38,57 @@
                     <i class="glyphicon glyphicon-user"></i> <span>Chofer</span>
                   </a>
                 </li>
-                <li id="MantenedorPagos" class="SubMenuSistema">
+                <li id="MantenedorPago" class="SubMenuSistema">
                   <a href="#" onclick="clickMenu('MantenedorTipoPago')">
-                    <i class="glyphicon glyphicon-paperclip"></i> <span>Tipo de Pagos</span>
+                    <i class="glyphicon glyphicon-paperclip"></i> <span>Tipo de Pago</span>
+                  </a>
+                </li>
+
+                <li id="MantenedorTipoGasto" class="SubMenuSistema">
+                  <a href="#" onclick="clickMenu('MantenedorTipoGasto')">
+                    <i class="glyphicon glyphicon-paperclip"></i> <span>Tipo de Gastos</span>
                   </a>
                 </li>
                 
+                <li id="MantenedorAsignacion" class="SubMenuSistema">
+                  <a href="#" onclick="clickMenu('MantenedorTipoAsignacion')">
+                    <i class="glyphicon glyphicon-paperclip"></i> <span>Asignacion</span>
+                  </a>
+                </li>
               
-              </ul>              
+              </ul> 
+
             </li>
             <li id="subMenu-Mantenedores" class="treeview menuSistema">
               <a href="#">
                 <i class="glyphicon glyphicon-paperclip"></i> <span>Actividades</span>
               </a>           
               <ul class="treeview-menu subMenu-Mantenedores" style="display: none;">
-                <li id="MantenedorPago" class="SubMenuSistema">
-                  <a href="#" onclick="clickMenu('MantenedorPago')">
-                    <i class="glyphicon glyphicon-user"></i> <span>Pagos</span>
-                  </a>
-                </li>
-                <li id="MantenedorGastos" class="SubMenuSistema">
-                  <a href="#" onclick="clickMenu('MantenedorGastos')">
-                    <i class="glyphicon glyphicon-paperclip"></i> <span>Gastos</span>
-                  </a>
-                </li>
-                      
-          </ul>
+                
+                  <li id="MantenedorPago" class="SubMenuSistema">
+                    <a href="#" onclick="clickMenu('MantenedorPago')">
+                      <i class="glyphicon glyphicon-user"></i> <span>Pagos</span>
+                    </a>
+                  </li>
+
+                  <li id="MantenedorGasto" class="SubMenuSistema">
+                    <a href="#" onclick="clickMenu('MantenedorGasto')">
+                      <i class="glyphicon glyphicon-paperclip"></i> <span>Gastos</span>
+                    </a>
+                  </li>
+
+                  <li id="MantenedorSolicitud" class="SubMenuSistema">
+                    <a href="#" onclick="clickMenu('MantenedorSolicitud')">
+                      <i class="glyphicon glyphicon-paperclip"></i> <span>Salida de Ruta</span>
+                    </a>
+                  </li>
+
+                  <li id="MantenedorGastos" class="SubMenuSistema">
+                    <a href="#" onclick="clickMenu('MantenedorAntecedente')">
+                      <i class="glyphicon glyphicon-paperclip"></i> <span>Antecedentes</span>
+                    </a>
+                  </li>
+              </ul>
         </section>
     <!-- /.sidebar -->
   </aside>
